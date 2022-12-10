@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Private Wall</title>
+</head>
+<body>
+    <div class="banner_left">
+        <h1>CodingDojo Wall</h1>
+    </div>
+    <div class="banner_right">
+        <h3>Welcome {{user.first_name}}!!</h3>
+        <button class="button"> <a href="/logout">Sign Out</a>
+        </button>
+    </div class = "create_message">
+        <form action="/create_message" method="post">
+            <h3>Send Messages!</h3>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+            <div>
+                <h4 class="flash">¡Ruh Roh!</h4>
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+            </div>
+                {% endif %}
+            {% endwith %}
+            <div>
+                <textarea name="message" cols="30" rows="10"></textarea>
+                <input type="hidden" name="receiver_id" value="{{receiver_id}}">
+                <input type="submit" value="send">
+            </div>
+        </form>
+    <div>
+    </div>
+</body>
+</html>

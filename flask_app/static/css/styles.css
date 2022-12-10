@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.flash{
+    color: crimson;
+}
+.button{
+    background-color: black;
+    color: antiquewhite;
+}
+.form1{
+    flex:1 ;
+    margin-left: 20px;
+    background-color: #fff;
+    border: 2px solid #999;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.form2{
+    flex:1 ;
+    background-color: #fff;
+    border: 2px solid #999;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
